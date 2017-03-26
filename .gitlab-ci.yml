@@ -1,0 +1,27 @@
+image: node:6
+
+stages:
+  - test
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - npm install
+
+tslint_job:
+  stage: test
+  script:
+    - ng lint
+
+test_job:
+  stage: test
+  script:
+    - npm run test:coverage
+
+build_job:
+  stage: build
+  script:
+    - npm run build
