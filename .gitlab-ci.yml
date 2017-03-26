@@ -9,6 +9,7 @@ cache:
     - node_modules/
 
 before_script:
+  - export PATH=$PATH:./node_modules/.bin/
   - npm install
 
 tslint_job:
