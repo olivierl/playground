@@ -1,4 +1,4 @@
-image: kadadev/node6-karma-chrome
+# image: kadadev/node6-karma-chrome
 
 stages:
   - test
