@@ -1,4 +1,4 @@
-image: node:6
+image: weboaks/node-karma-protractor-chrome
 
 stages:
   - test
@@ -9,13 +9,12 @@ cache:
     - node_modules/
 
 before_script:
-  - export PATH=$PATH:./node_modules/.bin/
-  - npm install
+  - yarn install
 
-tslint_job:
+lint_job:
   stage: test
   script:
-    - ng lint
+    - npm run lint
 
 test_job:
   stage: test
