@@ -1,4 +1,4 @@
-image: weboaks/node-karma-protractor-chrome
+image: kadadev/node6-karma-chrome
 
 stages:
   - test
@@ -9,7 +9,7 @@ cache:
     - node_modules/
 
 before_script:
-  - yarn install
+  - npm install
 
 lint_job:
   stage: test
