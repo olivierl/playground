@@ -1,3 +1,5 @@
+[![build status](https://gitlab.com/olivierl/playground/badges/master/build.svg)](https://gitlab.com/olivierl/playground/commits/master) [![coverage report](https://gitlab.com/olivierl/playground/badges/master/coverage.svg)](https://gitlab.com/olivierl/playground/commits/master)
+
 # Playground
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
