@@ -31,3 +31,6 @@ build_job:
     - docker
   script:
     - npm run build
+  artifacts:
+    paths:
+      - dist/
