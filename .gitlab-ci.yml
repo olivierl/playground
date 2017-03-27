@@ -9,7 +9,7 @@ cache:
     - node_modules/
 
 before_script:
-  - yarn install
+  - npm install
 
 lint_job:
   stage: test
