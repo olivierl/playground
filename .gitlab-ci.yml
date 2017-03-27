@@ -13,15 +13,21 @@ before_script:
 
 lint_job:
   stage: test
+  tags:
+    - docker
   script:
     - npm run lint
 
 test_job:
   stage: test
+  tags:
+    - docker
   script:
     - npm run test:coverage
 
 build_job:
   stage: build
+  tags:
+    - docker
   script:
     - npm run build
