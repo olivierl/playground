@@ -1,3 +1,18 @@
 machine:
   node:
     version: 6.10.1
+
+test: 
+  pre:
+    - npm run lint
+  override: 
+    - npm run test:coverage
+
+compile:
+  override:
+    - npm run build
+
+general:
+  artifacts:
+    - "coverage" # relative to the build directory
+    - "dist" # relative to the user's home directory
