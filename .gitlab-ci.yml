@@ -42,6 +42,9 @@ pages:
       - docker
   script:
     - npm run build:pages
+  environment:
+    name: staging
+    url: https://olivierl.gitlab.io/playground
   artifacts:
     paths:
       - public
