@@ -41,9 +41,9 @@ pages:
   tags:
       - docker
   script:
-    - npm run build -prod
+    - npm run build -prod -op public
   artifacts:
     paths:
-      - dist
+      - public
   only:
     - master
