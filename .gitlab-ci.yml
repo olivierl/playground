@@ -3,6 +3,7 @@ image: weboaks/node-karma-protractor-chrome
 stages:
   - test
   - build
+  - deploy
 
 cache:
   paths:
@@ -11,21 +12,21 @@ cache:
 before_script:
   - yarn install
 
-lint_job:
+lint:
   stage: test
   tags:
     - docker
   script:
     - npm run lint
 
-test_job:
+test:
   stage: test
   tags:
     - docker
   script:
     - npm run test:coverage
 
-build_job:
+build:
   stage: build
   tags:
     - docker
@@ -33,4 +34,16 @@ build_job:
     - npm run build
   artifacts:
     paths:
-      - dist/
+      - dist
+
+pages:
+  stage: deploy
+  tags:
+      - docker
+  script:
+    - npm run build -prod
+  artifacts:
+    paths:
+      - dist
+  only:
+    - master
