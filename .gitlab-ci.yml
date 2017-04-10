@@ -41,7 +41,7 @@ pages:
   tags:
       - docker
   script:
-    - npm run build -prod -op public
+    - npm run build:pages
   artifacts:
     paths:
       - public
