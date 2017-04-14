@@ -1,4 +1,4 @@
-image: weboaks/node-karma-protractor-chrome
+image: olivierl/chromium-xvfb-node
 
 stages:
   - test
