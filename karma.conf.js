@@ -46,11 +46,5 @@ module.exports = function (config) {
     autoWatch: true,
     browsers: ['Chrome'],
     singleRun: false,
-    customLaunchers: {
-      Chrome_no_sandbox: {
-        base: 'Chrome',
-        flags: ['--no-sandbox']
-      }
-    },
   });
 };

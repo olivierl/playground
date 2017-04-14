@@ -24,24 +24,22 @@ test:
   tags:
     - docker
   script:
-    - npm run test:coverage
+    - yarn run test:coverage
 
 build:
   stage: build
   tags:
     - docker
   script:
-    - npm run build
+    - yarn run build
+    - yarn run build:pages
   artifacts:
     paths:
       - dist
+      - public
 
 pages:
   stage: deploy
-  tags:
-      - docker
-  script:
-    - npm run build:pages
   environment:
     name: staging
     url: https://olivierl.gitlab.io/playground
