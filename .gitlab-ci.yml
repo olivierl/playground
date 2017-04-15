@@ -1,4 +1,4 @@
-image: olivierl/chromium-xvfb-node
+image: olivierl/chromium-xvfb-node:1.0.0
 
 stages:
   - test
@@ -17,21 +17,21 @@ lint:
   tags:
     - docker
   script:
-    - yarn run lint
+    - npm run lint
 
 test:
   stage: test
   tags:
     - docker
   script:
-    - yarn run test:coverage
+    - npm run test:coverage
 
 build:
   stage: build
   tags:
     - docker
   script:
-    - yarn run build
+    - npm run build
   artifacts:
     paths:
       - dist
