@@ -41,7 +41,7 @@ pages:
   tags:
       - docker
   script:
-    - yarn run build:pages
+    - npm run build:pages
   environment:
     name: staging
     url: https://olivierl.gitlab.io/playground
