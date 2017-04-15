@@ -13,21 +13,21 @@ lint:
   tags:
     - docker
   script:
-    - npm run lint
+    - yarn run lint
 
 test:
   stage: test
   tags:
     - docker
   script:
-    - npm run test:coverage
+    - yarn run test:coverage
 
 build:
   stage: build
   tags:
     - docker
   script:
-    - npm run build
+    - yarn run build
   artifacts:
     paths:
       - dist
@@ -37,7 +37,7 @@ pages:
   tags:
       - docker
   script:
-    - npm run build:pages
+    - yarn run build:pages
   environment:
     name: staging
     url: https://olivierl.gitlab.io/playground
