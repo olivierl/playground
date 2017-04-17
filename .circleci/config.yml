@@ -11,3 +11,8 @@ jobs:
       - run: yarn run lint
       - run: yarn run test:coverage
       - run: yarn run build
+    - store_artifacts:
+        path: dist/
+        destination: app
+    - store_test_results:
+        path: coverage/
