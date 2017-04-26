@@ -6,20 +6,14 @@ stages:
   - deploy
 
 before_script:
-  - yarn install
-
-lint:
-  stage: test
-  tags:
-    - docker
-  script:
-    - yarn run lint
+  - yarn install    
 
 test:
   stage: test
   tags:
     - docker
   script:
+    - yarn run lint
     - yarn run test:coverage
 
 build:
