@@ -3,14 +3,38 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'npm install'
-        sh 'npm run build'
+        echo 'npm install'
+        echo 'npm run build'
       }
     }
     stage('test') {
-      agent any
+      parallel {
+        stage('unit tests') {
+          agent any
+          steps {
+            echo 'Unit tests'
+          }
+        }
+        stage('integration tests') {
+          steps {
+            echo 'Integration tests'
+          }
+        }
+        stage('functional tests') {
+          steps {
+            echo 'Functional tests'
+          }
+        }
+      }
+    }
+    stage('release') {
       steps {
-        sh 'npm run test'
+        echo 'release'
+      }
+    }
+    stage('deploy') {
+      steps {
+        echo 'deploy'
       }
     }
   }
